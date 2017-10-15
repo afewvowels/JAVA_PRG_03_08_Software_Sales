@@ -51,6 +51,7 @@ public class JAVA_PRG_03_08_Software_Sales {
         
         // Declare float to hold final purchase cost
         float fltPurchaseCost;
+        float fltDiscountAmount;
         
         // Declare string to hold user input and output message
         String strUserInput;
@@ -75,29 +76,37 @@ public class JAVA_PRG_03_08_Software_Sales {
         else if(intUserInput >= INT_20_MIN && intUserInput <= INT_20_MAX)
         {
             fltPurchaseCost = ((float)intUserInput * (float)INT_UNIT_PRICE) * FLT_DISCOUNT_20;
-            strOutputMessage = String.format("You qualify for 20%% discount.\n"
-                    + "Your final purchase cost is $%.2f", fltPurchaseCost);
+            fltDiscountAmount = ((float)intUserInput * (float)INT_UNIT_PRICE) - fltPurchaseCost;
+            strOutputMessage = String.format("You qualify for 20%% discount.\n" +
+                    "That is a discount of $%,.2f.\n"
+                    + "Your final purchase cost is $%,.2f", fltDiscountAmount, fltPurchaseCost);
             JOptionPane.showMessageDialog(null, strOutputMessage);
         }
         else if(intUserInput >= INT_30_MIN && intUserInput <= INT_30_MAX)
         {
             fltPurchaseCost = ((float)intUserInput * (float)INT_UNIT_PRICE) * FLT_DISCOUNT_30;
-            strOutputMessage = String.format("You qualify for 30%% discount.\n"
-                    + "Your final purchase cost is $%.2f", fltPurchaseCost);
+            fltDiscountAmount = ((float)intUserInput * (float)INT_UNIT_PRICE) - fltPurchaseCost;
+            strOutputMessage = String.format("You qualify for 30%% discount.\n" +
+                    "That is a discount of $%,.2f.\n"
+                    + "Your final purchase cost is $%,.2f", fltDiscountAmount,  fltPurchaseCost);
             JOptionPane.showMessageDialog(null, strOutputMessage);
         }
         else if(intUserInput >= INT_40_MIN && intUserInput <= INT_40_MAX)
         {
             fltPurchaseCost = ((float)intUserInput * (float)INT_UNIT_PRICE) * FLT_DISCOUNT_40;
-            strOutputMessage = String.format("You qualify for 40%% discount.\n"
-                    + "Your final purchase cost is $%.2f", fltPurchaseCost);
+            fltDiscountAmount = ((float)intUserInput * (float)INT_UNIT_PRICE) - fltPurchaseCost;
+            strOutputMessage = String.format("You qualify for 40%% discount.\n" +
+                    "That is a discount of $%,.2f.\n"
+                    + "Your final purchase cost is $%,.2f", fltDiscountAmount,  fltPurchaseCost);
             JOptionPane.showMessageDialog(null, strOutputMessage);
         }
         else if(intUserInput >= INT_50_MIN)
         {
             fltPurchaseCost = ((float)intUserInput * (float)INT_UNIT_PRICE) * FLT_DISCOUNT_50;
-            strOutputMessage = String.format("You qualify for 50%% discount.\n"
-                    + "Your final purchase cost is $%.2f", fltPurchaseCost);
+            fltDiscountAmount = ((float)intUserInput * (float)INT_UNIT_PRICE) - fltPurchaseCost;
+            strOutputMessage = String.format("You qualify for 50%% discount.\n" +
+                    "That is a discount of $%,.2f.\n"
+                    + "Your final purchase cost is $%,.2f", fltDiscountAmount,  fltPurchaseCost);
             JOptionPane.showMessageDialog(null, strOutputMessage);
         }
         else
